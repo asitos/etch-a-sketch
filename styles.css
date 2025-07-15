@@ -6,26 +6,89 @@ body {
     flex-direction: column;
 }
 
+#frame {
+    padding: 50px 180px ;
+    background-color: #c71f37;
+    border-radius: 100px;
+    margin-bottom: 100px;
+}
+
 #grid-container {
     display: flex;
     flex-wrap: wrap;
-    width: 500px;
-    height: 500px;
+    width: 600px;
+    height: 600px;
+    padding: 40px 100px;
+    background-color: #eee;
+    border-radius: 25px;
 }
 
 .grid-square {
     aspect-ratio: 1;
     margin: 0;
     padding: 0;
+    background-color: #fff;
 
+}
+
+.comic-relief-regular {
+    font-family: "Comic Relief", system-ui;
+    font-weight: 500;
+    font-style: normal;
+    margin-bottom: 0;
+    color: #f8961e;
+    font-size: 48px;
+
+}
+
+.desc {
+    font-family: "Comic Relief", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: #941b0c;
+    background-color: #f8961e;
+    border-radius: 12px;
+    padding: 4px 14px;
+    margin-bottom: 24px;
+    font-size: 20px;
 }
 
 #buttons {
+    display: flex;
     flex-direction: row;
-    gap: 16px;
+    gap: 64px;
+    justify-content: center;
+    align-items: center;
 }
 
-#clear-btn {
-    margin-top: 16px;
+#size-display {
+    font-family: "Bitcount Grid Double", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 450;
+    font-style: normal;
+    font-variation-settings:
+        "slnt" 0,
+        "CRSV" 0.5,
+        "ELSH" 0,
+        "ELXP" 0;
+    font-size: 48px;
+    margin-top: 24px;
+    color: #f6aa1c;
+}
+
+#clear-btn, #new-grid-btn {
+    padding: 24px;
+    border-radius: 120px;
+    background-color: #fff9ec;
+    border-color: #fff9ec;
+    border-style: solid;
+    color: #5a189a;
+    margin-top: 24px;
+
+    font-family: "Comic Relief", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: #941b0c;
 }
 
