@@ -51,14 +51,22 @@ function deleteGrid() {
 }
 
 function newGrid() {
-    let rows = parseInt(prompt("Enter the number of rows (1-128): ", "16"));
+    let rows = parseInt(prompt("Enter the number of rows (1-48): ", "16"));
 
-    if (rows > 128 || rows < 0) {
+    if (rows > 48 || rows < 0) {
         alert("Please enter a valid value and learn to read retard");
     } else {
         deleteGrid();
         createGrid(rows);
         hoverEffect(rows);
+        displaySize(rows);
+    }
+}
+
+function displaySize(rows) {
+    const size = document.querySelector("#size-display");
+    if (size) {
+        size.textContent = `Grid Size:${rows}x${rows}` 
     }
 }
 
@@ -73,3 +81,4 @@ newGridBtn.addEventListener("click", newGrid);
 let rows = 16;
 createGrid(rows);
 hoverEffect(rows);
+displaySize(rows);
