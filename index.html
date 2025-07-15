@@ -6,12 +6,21 @@
     <link rel="stylesheet" href="./styles.css">
     <title>etch-a-sketch</title>
     <script src="./script.js" defer></script>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Comic+Relief:wght@400;700&display=swap');
+    </style>
 </head>
 <body>
-    <div id="grid-container"></div>
-    <div id="buttons">
-        <button id="clear-btn">clear grid</button>
-        <button id="new-grid-btn">new grid</button>
+    <h1 class="comic-relief-regular">etch-a-sketch!!! :3</h1>
+    <p class="desc">scribble, wiggle, prr, start over.</p>
+    <div id="frame">
+        <div id="grid-container"></div>
+        <div id="buttons">
+            <button id="clear-btn">clear grid</button>
+            <div id="size-display"></div>
+            <button id="new-grid-btn">new grid</button>
+        </div>
     </div>
 </body>
 </html>
