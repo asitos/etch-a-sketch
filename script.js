@@ -16,6 +16,11 @@ function createGrid(rows) {
     console.log("grid created");
 }
 
+function getRandomColor() {
+    const hue = Math.floor(Math.random() * 360);      // any hue
+    const pastel = `hsl(${hue}, 100%, 85%)`;            // soft saturation + lightness
+    return pastel;
+}
 
 function hoverEffect(rows) {
     const allDivs = document.querySelectorAll(".grid-square");
@@ -23,6 +28,7 @@ function hoverEffect(rows) {
         div.addEventListener("mouseover",
             (event) => { 
                 event.target.classList.add("hover-active");
+                event.target.style.backgroundColor = getRandomColor();
             }
         );
     });
@@ -30,12 +36,10 @@ function hoverEffect(rows) {
 }
     
     
-// create initial grid of 16x16 square divs
-
 function clearGrid() {
     const allDivs = document.querySelectorAll(".hover-active");
     allDivs.forEach(div => {
-        div.classList.remove("hover-active");
+        div.style.backgroundColor = "#fff";
     });
 }
 
@@ -47,8 +51,11 @@ function deleteGrid() {
 }
 
 function newGrid() {
-    let rows = parseInt(prompt("Enter the number of rows: ", "16"));
-    if (rows) {
+    let rows = parseInt(prompt("Enter the number of rows (1-128): ", "16"));
+
+    if (rows > 128 || rows < 0) {
+        alert("Please enter a valid value and learn to read retard");
+    } else {
         deleteGrid();
         createGrid(rows);
         hoverEffect(rows);
@@ -62,6 +69,7 @@ clearBtn.addEventListener("click", clearGrid);
 const newGridBtn = document.querySelector("#new-grid-btn");
 newGridBtn.addEventListener("click", newGrid);
 
+// create initial grid of 16x16 square divs
 let rows = 16;
 createGrid(rows);
 hoverEffect(rows);

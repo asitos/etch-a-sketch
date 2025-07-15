@@ -20,10 +20,6 @@ body {
 
 }
 
-.hover-active {
-    background-color: #ccc;
-}
-
 #buttons {
     flex-direction: row;
     gap: 16px;
