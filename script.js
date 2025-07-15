@@ -16,5 +16,21 @@ function createGrid(rows) {
     console.log("grid created");
 }
 
+
+function hoverEffect(rows) {
+    const allDivs = document.querySelectorAll(".grid-square");
+    allDivs.forEach(div => {
+        div.addEventListener("mouseover",
+            (event) => { 
+                event.target.classList.add("hover-active");
+            }
+        );
+    });
+    console.log("hovering active");
+}
+    
+    
 // create initial grid of 16x16 square divs
-createGrid(16);
+let rows = 16;
+createGrid(rows);
+hoverEffect(rows);

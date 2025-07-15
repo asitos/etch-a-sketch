@@ -14,4 +14,11 @@ body {
 
 .grid-square {
     aspect-ratio: 1;
+    margin: 0;
+    padding: 0;
+
+}
+
+.hover-active {
+    background-color: #ccc;
 }
