@@ -3,6 +3,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 #grid-container {
@@ -22,3 +23,12 @@ body {
 .hover-active {
     background-color: #ccc;
 }
+
+#buttons {
+    flex-direction: row;
+}
+
+#clear-btn {
+    margin: 16px;
+}
+

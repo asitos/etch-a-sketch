@@ -31,6 +31,18 @@ function hoverEffect(rows) {
     
     
 // create initial grid of 16x16 square divs
+
+function clearGrid() {
+    const allDivs = document.querySelectorAll(".hover-active");
+    allDivs.forEach(div => {
+        div.classList.remove("hover-active");
+    });
+}
+
+
+const clearBtn = document.querySelector("#clear-btn");
+clearBtn.addEventListener("click", clearGrid);
+
 let rows = 16;
 createGrid(rows);
 hoverEffect(rows);
