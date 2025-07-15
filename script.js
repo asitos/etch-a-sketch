@@ -3,11 +3,11 @@ function createGrid(rows) {
         for (let j = 0; j < rows; j++) {
             const div = document.createElement("div");
             div.classList.add("grid-square");
-            div.style.width = "calc(100% / 16)";
-            div.style.height = "calc(100% / 16)";
+            div.style.width = `calc(100% / ${rows})`;
+            div.style.height = `calc(100% / ${rows})`;
             div.style.border = "1px solid #ccc";
             div.style.boxSizing = "border-box";
-            div.style.flex = "1 0 calc(100% / 16)";
+            div.style.flex = `1 0 calc(100% / ${rows})`;
     
             document.querySelector("#grid-container").appendChild(div);
         }
@@ -39,9 +39,28 @@ function clearGrid() {
     });
 }
 
+function deleteGrid() {
+    const allDivs = document.querySelectorAll(".grid-square");
+    allDivs.forEach(div => {
+        div.remove();
+    });
+}
+
+function newGrid() {
+    let rows = parseInt(prompt("Enter the number of rows: ", "16"));
+    if (rows) {
+        deleteGrid();
+        createGrid(rows);
+        hoverEffect(rows);
+    }
+}
+
 
 const clearBtn = document.querySelector("#clear-btn");
 clearBtn.addEventListener("click", clearGrid);
+
+const newGridBtn = document.querySelector("#new-grid-btn");
+newGridBtn.addEventListener("click", newGrid);
 
 let rows = 16;
 createGrid(rows);

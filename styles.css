@@ -26,9 +26,10 @@ body {
 
 #buttons {
     flex-direction: row;
+    gap: 16px;
 }
 
 #clear-btn {
-    margin: 16px;
+    margin-top: 16px;
 }
 
