@@ -4,23 +4,53 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 #frame {
-    padding: 50px 180px ;
+    padding: 20px 40px;
     background-color: #c71f37;
-    border-radius: 100px;
-    margin-bottom: 100px;
+    border-radius: 50px;
+    margin-bottom: 50px;
+    margin: 10px;
+    max-width: 95vw;
+    box-sizing: border-box;
 }
 
 #grid-container {
     display: flex;
     flex-wrap: wrap;
-    width: 600px;
-    height: 600px;
-    padding: 40px 100px;
+    width: min(600px, 90vw);
+    height: min(600px, 90vw);
+    padding: 20px 40px;
     background-color: #eee;
     border-radius: 25px;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+#drawer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-left: 0;
+    flex-wrap: wrap;
+}
+
+#opacitor, #rainbow-toggle {
+    font-family: "Comic Relief", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    color: #941b0c;
+    padding: 10px 14px;
+    border-radius: 120px;
+    background-color: #fff9ec;
+    border-color: #fff9ec;
+    border-style: solid;
+    max-width: 108px;
 }
 
 .grid-square {
@@ -28,7 +58,6 @@ body {
     margin: 0;
     padding: 0;
     background-color: #fff;
-
 }
 
 .comic-relief-regular {
@@ -37,8 +66,7 @@ body {
     font-style: normal;
     margin-bottom: 0;
     color: #f8961e;
-    font-size: 48px;
-
+    font-size: clamp(24px, 8vw, 48px);
 }
 
 .desc {
@@ -50,15 +78,18 @@ body {
     border-radius: 12px;
     padding: 4px 14px;
     margin-bottom: 24px;
-    font-size: 20px;
+    font-size: clamp(14px, 4vw, 20px);
+    max-width: 90vw;
+    box-sizing: border-box;
 }
 
 #buttons {
     display: flex;
     flex-direction: row;
-    gap: 64px;
+    gap: 32px;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 #size-display {
@@ -71,24 +102,56 @@ body {
         "CRSV" 0.5,
         "ELSH" 0,
         "ELXP" 0;
-    font-size: 48px;
+    font-size: clamp(24px, 8vw, 48px);
     margin-top: 24px;
     color: #f6aa1c;
 }
 
 #clear-btn, #new-grid-btn {
-    padding: 24px;
+    padding: 16px 20px;
     border-radius: 120px;
     background-color: #fff9ec;
     border-color: #fff9ec;
     border-style: solid;
-    color: #5a189a;
     margin-top: 24px;
 
     font-family: "Comic Relief", system-ui;
     font-weight: 400;
     font-style: normal;
-    font-size: 16px;
+    font-size: 14px;
     color: #941b0c;
 }
 
+/* Media queries for very small screens */
+@media (max-width: 480px) {
+    #frame {
+        padding: 15px 20px;
+        border-radius: 30px;
+        margin: 5px;
+    }
+    
+    #grid-container {
+        padding: 15px 20px;
+        width: 85vw;
+        height: 85vw;
+    }
+    
+    #drawer {
+        gap: 8px;
+    }
+    
+    #buttons {
+        gap: 16px;
+        flex-direction: column;
+    }
+    
+    #clear-btn, #new-grid-btn {
+        padding: 12px 16px;
+        font-size: 12px;
+    }
+    
+    #opacitor, #rainbow-toggle {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+}
