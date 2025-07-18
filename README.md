@@ -12,8 +12,8 @@ a simple, browser-based sketching tool inspired by the classic etch-a-sketch toy
 - adjustable grid size withint viable resolution 
 - clear button that resets the canvas  
 - minimalist layout with responsive design  
-- optional rainbow mode toggle for switching between chaotic color output and greyscale (in progress)
-- optional opacitor button (in progress)
+- rainbow mode toggle for switching between chaotic color output and monochrome.
+- opacitor toggle button to increase 10% opacity per hover
 
 ---
 
