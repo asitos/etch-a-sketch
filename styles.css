@@ -45,12 +45,13 @@ body {
     font-style: normal;
     font-size: 14px;
     color: #941b0c;
-    padding: 10px 14px;
+    padding: 48px 14px;
     border-radius: 120px;
     background-color: #fff9ec;
     border-color: #fff9ec;
     border-style: solid;
-    max-width: 108px;
+    min-width: 120px;
+    max-width: 140px;
 }
 
 .grid-square {
