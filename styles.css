@@ -123,6 +123,12 @@ body {
     color: #941b0c;
 }
 
+button.clicked {
+    background-color: #111; /* A slightly darker background */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3) inset; /* An inner shadow */
+    color: red;
+}
+
 /* Media queries for very small screens */
 @media (max-width: 480px) {
     #frame {

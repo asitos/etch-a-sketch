@@ -206,17 +206,35 @@ function opacitorToggle() {
 }
 
 const clearBtn = document.querySelector("#clear-btn");
-clearBtn.addEventListener("click", clearGrid);
+clearBtn.addEventListener("click", function() {
+    clearGrid();
+    addButtonClickEffect(this);
+});
 
 const newGridBtn = document.querySelector("#new-grid-btn");
-newGridBtn.addEventListener("click", newGrid);
+newGridBtn.addEventListener("click", function() {
+    newGrid();
+    addButtonClickEffect(this);
+});
 
 const opacitorBtn = document.querySelector("#opacitor");
-opacitorBtn.addEventListener("click", opacitorToggle);
-opacitorBtn.textContent = "opacitor";
+opacitorBtn.addEventListener("click", function() {
+    opacitorToggle();
+    addButtonClickEffect(this);
+});
 
 const rainbowBtn = document.querySelector("#rainbow-toggle");
-rainbowBtn.addEventListener("click", modeToggle);
+rainbowBtn.addEventListener("click", function() {
+    modeToggle();
+    addButtonClickEffect(this);
+});
+
+function addButtonClickEffect(button) {
+    button.classList.add("clicked");
+    setTimeout(() => {
+        button.classList.remove("clicked");
+    }, 100); // Adjust the delay (in milliseconds) to suit your preference
+}
 
 // create initial grid of 16x16 square divs
 let rows = 16;
