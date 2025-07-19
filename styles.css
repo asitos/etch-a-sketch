@@ -65,9 +65,9 @@ body {
     font-family: "Comic Relief", system-ui;
     font-weight: 500;
     font-style: normal;
-    font-size: clamp(24px, 8vw, 48px);
     margin-bottom: 0;
     color: #f8961e;
+    font-size: clamp(24px, 8vw, 48px);
 }
 
 .desc {
