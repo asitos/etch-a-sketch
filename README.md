@@ -46,3 +46,7 @@ firefox index.html
 ```
 
 i hope you have fun playing with it as much as i had building it!
+
+## what's next?
+
+mobile support is on the way — right now it works best on desktop, but a touch-friendly version is planned soon.
